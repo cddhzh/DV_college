@@ -227,11 +227,16 @@ export default {
             }
         },
         toPage(){
-            if(this.academy == null){
-                alert("请选择学院")
+            if(this.tableData.length == 0){
+                alert("请先导入表格")
             }
             else{
-                this.$router.push('/firstPage?major='+this.major+'&academy='+this.academy)
+                if(this.academy == null){
+                    alert("请选择学院")
+                }
+                else{
+                    this.$router.push('/firstPage?major='+this.major+'&academy='+this.academy)
+                }
             }
         }
     },

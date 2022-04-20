@@ -21,7 +21,7 @@ export default {
             const chart = this.$echarts.init(this.$refs.chart, theme);
             const option = {
                 title: {
-                    text: '柱状图'
+                    text: '各省加权平均分情况'
                 },
                 legend: {
                     data : ['加权平均成绩']

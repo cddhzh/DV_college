@@ -34,7 +34,7 @@ export default {
             const chart = this.$echarts.init(this.$refs.chart, theme);
             var option = {
                 title: {  //标题样式
-                    text: '中国地图',
+                    text: '各省加权平均分情况',
                     x: "center",
                     textStyle: {
                         fontSize: 18,

@@ -30,7 +30,7 @@ export default {
                 title: [
                     {
                         left: 'center',
-                        text: '渐变折线图'
+                        text: '各省加权平均分情况'
                     }
                 ],
                 toolbox: {

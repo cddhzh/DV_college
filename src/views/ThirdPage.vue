@@ -15,15 +15,15 @@
                     </el-option>
                 </el-select>
                 <br><br>
-                <el-select style="width: 90%; height: 20px" v-model="major" placeholder="请选择专业" @change="getSubject">
-                    <el-option
-                        v-for="major in majors"
-                        :key="major"
-                        :label="major"
-                        :value="major">
-                    </el-option>
-                </el-select>
-                <br><br>
+<!--                <el-select style="width: 90%; height: 20px" v-model="major" placeholder="请选择专业" @change="getSubject">-->
+<!--                    <el-option-->
+<!--                        v-for="major in majors"-->
+<!--                        :key="major"-->
+<!--                        :label="major"-->
+<!--                        :value="major">-->
+<!--                    </el-option>-->
+<!--                </el-select>-->
+<!--                <br><br>-->
                 <el-select style="width: 90%; height: 20px" v-model="subject" placeholder="请选择学科">
                     <el-option
                         v-for="subject in subjects"
@@ -33,13 +33,6 @@
                     </el-option>
                 </el-select>
                 <br><br>
-                <el-button style="width: 30%; background-color: #f15555">
-                    <font color="#f0f8ff">期望排名</font>
-                </el-button>
-                &nbsp;
-                <el-input v-model="rate" style="width: 55%; height: 20px" placeholder="请输入你期望的排名（单位为百分比）">
-                </el-input>
-                <br>
                 <el-button style="width: 30%; background-color: #f15555">
                     <font color="#f0f8ff">分数范围</font>
                 </el-button>
@@ -52,6 +45,13 @@
                         :value="level.key">
                     </el-option>
                 </el-select>
+                <br>
+                <el-button style="width: 30%; background-color: #f15555">
+                    <font color="#f0f8ff">期望排名</font>
+                </el-button>
+                &nbsp;
+                <el-input v-model="rate" style="width: 55%; height: 20px" placeholder="请输入你期望的排名（单位为百分比）">
+                </el-input>
                 <br><br><br>
                 <el-button @click="updateData" style="width: 100px; background-color: #C23531">
                     <font color="#f0f8ff">确认</font>
