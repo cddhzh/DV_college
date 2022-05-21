@@ -22,6 +22,9 @@
                 <el-button @click="updateData" style="; background-color: #f15555" round>
                     <font color="#f0f8ff">确认</font>
                 </el-button>&nbsp;
+                <el-button @click="Back" style="; background-color: #f15555" round>
+                    <font color="#f0f8ff">上一页</font>
+                </el-button>
                 <el-button @click="toPage" style="; background-color: #f15555" round>
                     <font color="#f0f8ff">下一页</font>
                 </el-button>
@@ -62,6 +65,9 @@ export default {
         }
     },
     methods: {
+        Back(){
+            window.history.go(-1);
+        },
         getMajor(){
             this.majors = []
             const _this = this
@@ -131,13 +137,13 @@ export default {
         const avgs = []
         for (const provinceKey in province) {
             let sum = 0, length = 0
-            this.tableData.forEach(function (e) {
+            this.now_Data.forEach(function (e) {
                 if(e.省份 == province[provinceKey]){
                     sum += e.加权平均分
                     length += 1
                 }
             })
-            avgs.push(sum/length)
+            avgs.push((sum/length).toFixed(2))
         }
         this.province_avg = avgs
         sessionStorage.setItem('avgs', JSON.stringify(avgs))

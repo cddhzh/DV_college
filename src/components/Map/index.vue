@@ -15,7 +15,8 @@ export default {
         }
     },
     created() {
-
+        console.log(this.x_data)
+        console.log(this.y_data)
     },
     mounted() {
         this.getData()

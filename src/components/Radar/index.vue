@@ -58,7 +58,6 @@ export default {
                         data: [
                             {
                                 value: this.y_data,
-                                name: 'Allocated Budget'
                             }
                         ],
                     }

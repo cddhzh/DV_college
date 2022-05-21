@@ -5,7 +5,8 @@ import Login from "../views/Login.vue";
 import uploadXlsx from "@/views/uploadXlsx";
 import firstPage from "@/views/FirstPage";
 import secondPage from "@/views/SecondPage";
-import thirdPage from "@/views/ThirdPage";
+import thirdPage from "@/views/ThirdPage"
+import fourthPage from "@/views/FourthPage";
 
 Vue.use(VueRouter)
 
@@ -42,6 +43,10 @@ const routes = [
     {
         path: '/thirdPage',
         component: thirdPage
+    },
+    {
+        path: '/fourthPage',
+        component: fourthPage
     }
 ]
 

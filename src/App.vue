@@ -16,6 +16,7 @@
     text-align: center;
     color: #2c3e50;
     background-color: rgba(242,234,191,0.15);
+    height: 100%;
 }
 
 nav {
@@ -29,5 +30,11 @@ nav a {
 
 nav a.router-link-exact-active {
     color: #42b983;
+}
+
+html, body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
 }
 </style>

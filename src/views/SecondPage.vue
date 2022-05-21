@@ -4,7 +4,7 @@
             <font color="#f0f8ff" style="position: relative; top: 30%;">某分数段学生在各省份分布情况</font>
         </el-header>
         <div style="height: 640px">
-            <el-aside width="20%" style="display: inline-block; height: 100%; border: 1px solid; border-radius: 5px; background-color: rgba(242,234,191,0.15)">
+            <el-aside width="20%" style="display: inline-block; height: 100%; border-radius: 5px; background-color: rgba(242,234,191,0.15)">
                 <br>
                 <el-select style="width: 90%;" v-model="academy" placeholder="请选择学院" @change="getMajor">
                     <el-option
@@ -37,6 +37,9 @@
                     <font color="#f0f8ff">确认</font>
                 </el-button>
                 <br><br>
+                <el-button @click="Back" style="width: 100px; background-color: #C23531">
+                    <font color="#f0f8ff">上一页</font>
+                </el-button>
                 <el-button @click="toPage" style="width: 100px; background-color: #C23531">
                     <font color="#f0f8ff">下一页</font>
                 </el-button>
@@ -70,6 +73,9 @@ export default {
         }
     },
     methods: {
+        Back(){
+            window.history.go(-1);
+        },
         getMajor(){
             this.majors = []
             const _this = this
